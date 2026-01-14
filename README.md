@@ -11,8 +11,7 @@ Detta är en enkel konsolapplikation i C# som kontrollerar svenska personnummer.
 
 ## Kör programmet
 
-1. Klona repot och byt till din branch:
+1. Klona repot:
 
 ```bash
-git clone <repo-url>
-git checkout Karis
+git clone https://github.com/NilsDavid01/personnummer-kontroll.git
