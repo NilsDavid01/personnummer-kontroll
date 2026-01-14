@@ -26,7 +26,7 @@ Detta är en enkel **C#-konsolapplikation** som kontrollerar svenska personnumme
 
 ## Kör programmet lokalt
 
-1. Klona repot och byt till din branch:
+1. Klona repot:
 
 ```bash
 git clone <repo-url>
