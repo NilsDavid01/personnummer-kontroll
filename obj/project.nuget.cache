@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CZMUcnx7+4U=",
+  "success": true,
+  "projectFilePath": "/home/david/Documents/KYH/CICD/personnummer-kontroll/personnummer-kontroll.csproj",
+  "expectedPackageFiles": [
+    "/home/david/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
