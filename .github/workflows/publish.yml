@@ -27,3 +27,4 @@ jobs:
           push: true
           tags: snowinswedish/dso25-docker:latest
     
+ 
