@@ -1,38 +1,56 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-Console.Write("Ange ett svenskt personnummer (YYYYMMDD-XXXX): ");
-string input = Console.ReadLine() ?? "";
-
-if (!Regex.IsMatch(input, @"^\d{8}-\d{4}$"))
+public class Validator
 {
-    Console.WriteLine("Fel format.");
-}
-
-else
-{
-    string numbers = input.Replace("-", "");
-    string luhnDigits = numbers.Substring(2); 
-    int sum = 0;
-
-    for (int i = 0; i < luhnDigits.Length; i++)
+    public static bool IsValidFormat(string input)
     {
-        int digit = int.Parse(luhnDigits[i].ToString());
-        if (i % 2 == 0)
+        return Regex.IsMatch(input ?? "", @"^\d{8}-\d{4}$");
+    }
+
+    public static bool IsValidPersonnummer(string input)
+    {
+        if (!IsValidFormat(input)) 
         {
-            digit *= 2;
-            if (digit > 9) digit -= 9;
+            return false;
         }
-        sum += digit;
-    }
 
-    if (sum % 10 == 0)
-    {
-        Console.WriteLine("Personnumret är korrekt!");
-    }
+        string numbers = input.Replace("-", "");
+        string luhnDigits = numbers.Substring(2); 
+        int sum = 0;
 
-    else
-    {
-        Console.WriteLine("Personnumret är ogiltigt!");
+        for (int i = 0; i < luhnDigits.Length; i++)
+        {
+            int digit = int.Parse(luhnDigits[i].ToString());
+
+            if (i % 2 == 0)
+            {
+                digit *= 2;
+                if (digit > 9) digit -= 9;
+            }
+
+            sum += digit;
+        }
+        return sum % 10 == 0;
     }
 }
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.Write("Ange ett svenskt personnummer (YYYYMMDD-XXXX): ");
+        string input = Console.ReadLine() ?? "";
+
+        if (Validator.IsValidPersonnummer(input))
+        {
+            Console.WriteLine("Personnumret är korrekt!");
+        }
+
+        else
+        {
+            Console.WriteLine("Personnumret är ogiltigt!"); 
+        }
+    }
+}
+
