@@ -48,4 +48,6 @@ dotnet run
 
 ## Docker
 - För att köra applikationen i Docker:
-- Instruktioner för att bygga och köra Docker-containern kommer att läggas till senare.
+```bash
+docker run -it --pull=always davida01/dso25-personnummer:latest
+```
