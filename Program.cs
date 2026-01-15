@@ -42,14 +42,19 @@ public class Program
         Console.Write("Ange ett svenskt personnummer (YYYYMMDD-XXXX): ");
         string input = Console.ReadLine() ?? "";
 
-        if (Validator.IsValidPersonnummer(input))
+        if (!Validator.IsValidFormat(input))
+        {
+            Console.WriteLine("Fel format! Personnumret måste vara YYYYMMDD-XXXX.");
+        }
+
+        else if (Validator.IsValidPersonnummer(input))
         {
             Console.WriteLine("Personnumret är korrekt!");
         }
 
         else
         {
-            Console.WriteLine("Personnumret är ogiltigt!"); 
+            Console.WriteLine("Personnumret är ogiltigt!");
         }
     }
 }
