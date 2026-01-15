@@ -29,7 +29,7 @@ Detta är en enkel **C#-konsolapplikation** som kontrollerar svenska personnumme
 1. Klona repot:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/NilsDavid01/personnummer-kontroll.git
 cd personnummer-kontroll 
 ```
 
