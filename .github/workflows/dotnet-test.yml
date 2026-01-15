@@ -2,9 +2,9 @@ name: .NET Test Runner
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main, master, develop, David ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, David ]
 
 jobs:
   test:
