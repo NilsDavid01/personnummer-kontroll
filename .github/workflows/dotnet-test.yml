@@ -17,14 +17,18 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '9.0.x'  
+        dotnet-version: '9.0.x'
 
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build project
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build --no-restore
 
-    - name: Run unit tests
-      run: dotnet test --no-build --verbosity normal
-
+    - name: Run tests using test adapter
+      run: |
+        # Install xUnit runner if needed
+        dotnet add package xunit.runner.visualstudio --version 2.8.2
+        
+        # Run tests explicitly
+        dotnet test --test-adapter-path:. --logger:console
