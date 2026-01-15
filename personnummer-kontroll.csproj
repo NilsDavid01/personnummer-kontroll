@@ -6,6 +6,7 @@
     <RootNamespace>personnummer_kontroll</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Program.cs</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
