@@ -6,11 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <StartupObject>Program</StartupObject>
-    
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <!-- Exkludera testfilen från bygget -->
-  <ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
     <Compile Remove="testfil.cs" />
   </ItemGroup>
 
