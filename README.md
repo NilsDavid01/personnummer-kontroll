@@ -1,6 +1,6 @@
 # personnummer-kontroll
 
-# Hej världen!
+# Hej världen! Hur är läget?
 
 ## Kör programmet via Docker och skapa ett genvägskommando i bash.(Detta är enbart för linuxanvändare)
 
