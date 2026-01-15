@@ -2,7 +2,9 @@
 
 ## Kör programmet via Docker och skapa ett genvägskommando i bash.
 
-echo "alias personnummer='docker run -it --pull=always davida01/dso25-personnummer:latest'" >> ~/.bashrc
+1. echo "alias personnummer='docker run -it --pull=always davida01/dso25-personnummer:latest'" >> ~/.bashrc
 
-source ~/.bashrc 
+2. source ~/.bashrc 
+
+3. Personnummer
 
