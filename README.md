@@ -7,7 +7,7 @@
 
 
 
-## Kör programmet via Docker och skapa ett genvägskommando i bash.(Detta är enbart för linuxanvändare)
+## Skapa ett Docker genvägskommando i bash för att köra programmet.(Detta är enbart för linuxanvändare)
 
 1. echo "alias personnummer='docker run -it davida01/dso25-personnummer:latest'" >> ~/.bashrc
 
