@@ -11,4 +11,4 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "PersonnummerKontroll.dll"]
+ENTRYPOINT ["dotnet", "personnummer-kontroll.dll"]
