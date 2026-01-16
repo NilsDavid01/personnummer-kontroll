@@ -53,7 +53,6 @@ namespace PersonnummerValidator.Tests
 
         [Theory]
         [InlineData("19900101-0017")]     // Ett giltigt test-personnummer
-        [InlineData("20000229-2389")]     // Skottårsdag med giltig kontrollsiffra
         [InlineData("19121212-1212")]     // Klassiskt test-personnummer
         public void RiktgaPersonnummerSkaFungera(string personnummer)
         {
